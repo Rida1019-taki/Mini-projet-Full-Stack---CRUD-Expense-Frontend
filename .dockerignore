@@ -1,0 +1,7 @@
+Mini/node_modules
+Mini/dist
+node_modules
+dist
+.git
+.gitignore
+.env.local
