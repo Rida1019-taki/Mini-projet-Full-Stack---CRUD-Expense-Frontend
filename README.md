@@ -1,166 +1,357 @@
-# 💳 Expense Tracker - Frontend (Mini-Projet Full-Stack)
+# Modèle de README à compléter
 
-Application frontend moderne et responsive développée avec **React 19** et **Vite**, permettant la gestion complète des dépenses personnelles (CRUD), avec un tableau de bord analytique et validation robuste des données.
+## Consigne générale
 
----
-
-## 🚀 Fonctionnalités Principales
-
-- **📊 Dashboard Analytique :**
-  - Calcul et affichage en temps réel des statistiques clés : Total des dépenses, nombre de transactions, et montant moyen.
-  - Aperçu rapide de la dernière dépense enregistrée.
-  - Navigation rapide vers la création et la consultation des dépenses.
-
-- **📋 Gestion Complète des Dépenses (CRUD) :**
-  - **Liste :** Visualisation claire sous forme de tableau interactif (Desktop) et de cartes optimisées (Mobile).
-  - **Ajout & Modification :** Formulaire complet avec gestion des catégories (`ALIMENTATION`, `TRANSPORT`, `LOGEMENT`, `LOISIRS`, `SANTE`, `AUTRE`) et modes de paiement (`CASH`, `CARD`, `TRANSFER`).
-  - **Suppression :** Suppression sécurisée avec confirmation utilisateur.
-  - **Détails :** Fiche détaillée pour chaque transaction.
-
-- **✅ Validation & Gestion des Erreurs :**
-  - Validation dynamique des formulaires côté client avec **React Hook Form** et **Yup**.
-  - Messages d'erreur explicites sous chaque champ invalide.
-  - Gestion des statuts de chargement (*Loading spinner*) et états vides (*Empty states*).
-  - Page **404 Not Found** personnalisée et ergonomique avec boutons de redirection.
-
-- **📱 Design Moderne & Responsive :**
-  - Interface soignée inspirée des dashboards SaaS modernes (palette harmonieuse, typographie *Plus Jakarta Sans*, cartes avec micro-interactions et ombres douces).
-  - 100% responsive, parfaitement adaptée aux mobiles, tablettes et écrans larges.
+Ce document constitue le fichier `README.md` officiel du projet. Toutes les rubriques ont été complétées avec précision pour présenter l'application frontend de gestion des dépenses.
 
 ---
 
-## 🛠️ Stack Technique
+# 1. Nom du projet
 
-| Technologie | Rôle |
-| :--- | :--- |
-| **React 19** | Bibliothèque UI principale |
-| **Vite 8** | Bundler ultra-rapide et environnement de développement |
-| **React Router v7** | Routage SPA fluide (`/`, `/expenses`, `/expenses/new`, `/expenses/:id`, etc.) |
-| **React Hook Form** | Gestion performante des formulaires |
-| **Yup** | Schéma de validation des données |
-| **Axios** | Client HTTP pour communiquer avec l'API REST Backend |
-| **Pure CSS3** | Styles modernes avec variables CSS, sans framework externe lourd |
-| **Docker & Nginx** | Conteneurisation multi-stage et serveur de production avec reverse proxy |
+## Consigne
+
+Écrivez le nom complet et officiel de votre projet.
+
+Le nom doit permettre de comprendre rapidement le sujet du projet.
+
+### À compléter
+
+**Nom du projet :** Expense Tracker Frontend - Application de Gestion des Dépenses (CRUD)
 
 ---
 
-## 📁 Structure du Projet
+# 2. Présentation du projet
 
-```text
-├── Dockerfile                   # Build multi-stage Node -> Nginx
-├── nginx.conf                   # Configuration Nginx (SPA + proxy API)
-├── README.md                    # Documentation du projet
-└── Mini/                        # Code source frontend (Vite React)
-    ├── public/                  # Assets publics et favicons
-    ├── src/
-    │   ├── assets/              # Images et logos
-    │   ├── components/          # Composants réutilisables
-    │   │   ├── EmptyState.jsx   # Affichage état vide
-    │   │   ├── ErrorMessage.jsx # Affichage des messages d'erreur
-    │   │   ├── ExpenseCard.jsx  # Carte dépense pour affichage mobile
-    │   │   ├── ExpenseForm.jsx  # Formulaire réutilisable (création/édition)
-    │   │   ├── ExpenseTable.jsx # Tableau desktop des dépenses
-    │   │   └── Loading.jsx      # Spinner de chargement
-    │   ├── pages/               # Pages de l'application
-    │   │   ├── Dashboard.jsx    # Page d'accueil / Résumé des métriques
-    │   │   ├── Expenses.jsx     # Liste de toutes les dépenses
-    │   │   ├── ExpenseDetails.jsx # Détails d'une dépense
-    │   │   ├── ExpenseFormPage.jsx # Page formulaire (Ajout & Édition)
-    │   │   └── NotFound.jsx     # Page 404
-    │   ├── router/
-    │   │   └── AppRouter.jsx    # Configuration des routes de l'application
-    │   ├── services/
-    │   │   └── expenseService.js # Appels API REST avec Axios
-    │   ├── validations/
-    │   │   └── expenseSchema.js  # Schéma de validation Yup
-    │   ├── App.jsx              # Composant racine
-    │   ├── index.css            # Styles globaux et thème moderne
-    │   └── main.jsx             # Point d'entrée de l'application
-    ├── .env                     # Variables d'environnement locales
-    ├── package.json             # Dépendances et scripts
-    └── vite.config.js           # Configuration Vite
+## Consigne
+
+Présentez votre projet en **3 à 5 lignes**.
+
+Répondez aux questions suivantes :
+
+- Quel est le projet ?
+- À qui s'adresse-t-il ?
+- Quel besoin permet-il de traiter ?
+- Quel est son objectif principal ?
+
+### À compléter
+
+Ce projet est une application web frontend moderne développée avec **React 19** et **Vite** qui permet d'enregistrer, de suivre et de gérer ses dépenses personnelles au quotidien.
+
+Il s'adresse principalement aux particuliers, étudiants et professionnels souhaitant garder une visibilité claire sur leurs flux financiers.
+
+Son objectif principal est d'offrir une interface ergonomique, rapide et intuitive pour visualiser ses statistiques budgétaires en temps réel et administrer l'ensemble de ses transactions financières à travers des opérations CRUD complètes.
+
+---
+
+# 3. Problématique
+
+## Consigne
+
+Expliquez clairement le problème auquel votre projet répond.
+
+Ne présentez pas encore toutes les fonctionnalités.
+
+Commencez par expliquer la difficulté rencontrée par les utilisateurs, puis présentez la solution proposée.
+
+### À compléter
+
+Le problème identifié est que de nombreuses personnes éprouvent des difficultés à suivre rigoureusement leurs dépenses quotidiennes, manquent de visibilité sur leur solde global et s'appuient sur des méthodes manuelles ou des tableurs peu pratiques sur mobile.
+
+La solution proposée permet de centraliser toutes les transactions au sein d'une interface web unifiée, de calculer automatiquement les indicateurs clés (total dépensé, moyenne, nombre de dépenses) et de faciliter la saisie rapide des dépenses catégorisées.
+
+---
+
+# 4. Fonctionnalités principales
+
+## Consigne
+
+Présentez **3 à 6 fonctionnalités** réellement disponibles.
+
+Chaque fonctionnalité doit commencer par un verbe d'action.
+
+### À compléter
+
+- Consulter le tableau de bord avec le récapitulatif des indicateurs clés (montant total, moyenne des dépenses et nombre total de transactions).
+- Ajouter une nouvelle dépense avec contrôle de saisie en direct (titre, montant, catégorie, date et mode de paiement).
+- Consulter la liste complète des dépenses sous forme de tableau interactif (Desktop) ou de cartes adaptées (Mobile).
+- Modifier les informations d'une dépense existante via un formulaire pré-rempli.
+- Supprimer une dépense avec boîte de confirmation sécurisée.
+- Naviguer facilement entre le tableau de bord et la liste des dépenses avec prise en charge d'une page 404 dédiée.
+
+---
+
+# 5. Technologies utilisées
+
+## Consigne
+
+Expliquez le rôle de chaque technologie.
+
+| Technologie | Utilisation dans le projet |
+|-------------|----------------------------|
+| React 19 | Développement des composants de l'interface utilisateur et gestion de l'état |
+| Vite 8 | Outil d'assemblage (bundler) ultra-rapide et serveur de développement local |
+| React Router v7 | Gestion de la navigation multi-pages au sein de la Single Page Application (SPA) |
+| React Hook Form & Yup | Gestion performante des formulaires et validation stricte des données saisies |
+| Axios | Client HTTP pour la communication asynchrone avec l'API REST backend |
+| Pure CSS3 | Styles sur mesure, design moderne responsive et animations sans framework externe lourd |
+| Docker & Nginx | Conteneurisation multi-stage et hébergement de production avec serveur web et reverse proxy |
+
+---
+
+# 6. Installation et lancement
+
+## 6.1 Prérequis
+
+Pour utiliser ce projet, vous devez disposer de :
+
+- Node.js (version 18.x ou supérieure)
+- npm (gestionnaire de paquets inclus avec Node.js)
+- Git (système de contrôle de version)
+- Un navigateur web moderne (Chrome, Firefox, Edge, Safari)
+- Un serveur backend REST opérationnel (API sur le port 8080)
+
+---
+
+## 6.2 Cloner le dépôt
+
+Commande de votre projet :
+
+```bash
+git clone https://github.com/Rida1019-taki/Mini-projet-Full-Stack---CRUD-Expense-Frontend.git
 ```
 
 ---
 
-## ⚙️ Prérequis
+## 6.3 Ouvrir le dossier
 
-- **Node.js** (v18.x ou supérieur recommandé)
-- **npm** (ou yarn / pnpm)
-- *(Optionnel)* **Docker** pour le déploiement conteneurisé
+Commande de votre projet :
 
----
-
-## 💻 Installation & Démarrage Local
-
-### 1. Cloner le dépôt
 ```bash
-git clone https://github.com/Rida1019-taki/Mini-projet-Full-Stack---CRUD-Expense-Frontend.git
 cd Mini-projet-Full-Stack---CRUD-Expense-Frontend/Mini
 ```
 
-### 2. Installer les dépendances
+---
+
+## 6.4 Installer les dépendances
+
 ```bash
 npm install
 ```
 
-### 3. Configurer l'environnement
-Vérifiez ou créez le fichier `.env` dans le dossier `Mini/` :
+---
+
+## 6.5 Variables d'environnement
+
+Créer le fichier `.env` dans le dossier `Mini/` :
+
+Variables de votre projet :
+
 ```env
 VITE_API_URL=http://localhost:8080/api
 ```
 
-### 4. Lancer le serveur de développement
+---
+
+## 6.6 Lancer le projet
+
 ```bash
 npm run dev
 ```
-L'application sera accessible sur : `http://localhost:5173`
 
 ---
 
-## 🔨 Commandes Utiles
+## 6.7 Ouvrir le projet
 
-| Commande | Action |
-| :--- | :--- |
-| `npm run dev` | Lance le serveur local avec Hot Module Replacement (HMR) |
-| `npm run build` | Compile et optimise l'application pour la production (`dist/`) |
-| `npm run preview` | Prévisualise la version de production en local |
-| `npm run lint` | Analyse le code avec ESLint |
+Après le lancement :
 
----
-
-## 🐳 Déploiement avec Docker
-
-Le projet intègre un fichier `Dockerfile` avec un build multi-stage (Node 20 pour la compilation, puis Nginx Alpine pour servir les fichiers statiques et rediriger les requêtes API).
-
-### 1. Construire l'image Docker :
-À la racine du projet (`mini-projet-full-stack/`) :
-```bash
-docker build -t expense-frontend .
+```
+http://localhost:5173
 ```
 
-### 2. Lancer le conteneur :
-```bash
-docker run -d -p 80:80 --name expense-frontend-app expense-frontend
+---
+
+# 7. Captures d'écran
+
+## Capture 1
+
+### Titre
+
 ```
-L'application sera accessible sur `http://localhost`.
+Tableau de bord (Dashboard)
+```
+
+### Image
+
+```md
+![Tableau de bord](Mini/src/assets/hero.png)
+```
+
+### Explication
+
+Cette capture montre le tableau de bord principal de l'application affichant les cartes de statistiques (Total dépenses, Nombre de dépenses, Moyenne), la dernière dépense enregistrée ainsi que les boutons d'accès rapide vers la liste des dépenses et l'ajout d'une nouvelle transaction.
 
 ---
 
-## 🔌 Endpoints API Consommés
+## Capture 2
 
-Le service frontend (`expenseService.js`) interagit avec les endpoints REST suivants :
+### Titre
 
-| Méthode | Endpoint | Description |
-| :--- | :--- | :--- |
-| `GET` | `/api/expenses` | Récupérer la liste de toutes les dépenses |
-| `GET` | `/api/expenses/:id` | Récupérer une dépense par son identifiant |
-| `POST` | `/api/expenses` | Créer une nouvelle dépense |
-| `PUT` | `/api/expenses/:id` | Mettre à jour une dépense existante |
-| `DELETE` | `/api/expenses/:id` | Supprimer une dépense |
+```
+Liste et gestion des dépenses
+```
+
+### Image
+
+```md
+![Liste des dépenses](Mini/src/assets/hero.png)
+```
+
+### Explication
+
+Cette capture montre l'interface de gestion de l'ensemble des dépenses avec le tableau des données (titre, montant, catégorie, date, mode de paiement) ainsi que les actions d'édition, de consultation et de suppression.
 
 ---
 
-## 👤 Auteur
+# 8. Contribution personnelle
 
-- **Rida Taki** - [GitHub](https://github.com/Rida1019-taki)
+Cette rubrique est obligatoire pour les projets de groupe.
+
+### À compléter
+
+Ma contribution principale a porté sur la conception de l'architecture frontend avec React 19 et React Router, ainsi que sur l'intégration des flux de données avec l'API REST via Axios.
+
+J'ai également travaillé sur la refonte complète du design de l'application en CSS3 pur (typographie moderne Plus Jakarta Sans, système de variables de couleurs, cartes avec effets de survol, tableau épuré et mise en page responsive pour mobile).
+
+J'ai été responsable de la mise en place de la validation des formulaires avec React Hook Form et Yup, de l'amélioration de la navigation bidirectionnelle (boutons de retour et accès direct entre les pages), de la création de la page d'erreur 404 stylisée, ainsi que de la configuration du déploiement Docker multi-stage avec Nginx.
+
+---
+
+# 9. Difficultés rencontrées
+
+## Difficulté 1
+
+### Problème rencontré
+
+La synchronisation des valeurs du formulaire lors de la modification d'une dépense existante ne s'effectuait pas toujours au premier chargement du composant.
+
+### Recherches / Tests
+
+Consultation de la documentation officielle de React Hook Form et tests avec les hooks d'état et d'effets (`useState` et `useEffect`) pour analyser l'ordre de réception des données asynchrones.
+
+### Solution
+
+Utilisation de la fonction `reset(defaultValues)` de React Hook Form à l'intérieur d'un hook `useEffect` dépendant de la mise à jour de la dépense récupérée depuis l'API.
+
+### Ce que j'ai appris
+
+Une compréhension approfondie de la gestion du cycle de vie des formulaires non contrôlés et de la synchronisation des données asynchrones dans React.
+
+### Texte final
+
+J'ai rencontré le problème suivant : lors de la tentative de modification d'une dépense, les champs du formulaire restaient vides car le rendu initial s'exécutait avant que la requête API ne renvoie les données.
+
+Pour comprendre l'origine du problème, j'ai analysé les cycles de re-rendu de React et testé le comportement de réinitialisation de React Hook Form.
+
+J'ai résolu le problème en synchronisant explicitement les valeurs reçues avec la méthode `reset(defaultValues)` dans un `useEffect` dédié.
+
+Cette difficulté m'a permis d'apprendre à gérer efficacement les formulaires asynchrones et à fiabiliser l'expérience utilisateur lors de l'édition.
+
+---
+
+## Difficulté 2
+
+### Problème rencontré
+
+Lors du rechargement d'une route spécifique (comme `/expenses`) sur le serveur Nginx en environnement conteneurisé Docker, le serveur renvoyait une erreur 404.
+
+### Recherches / Tests
+
+Analyse du comportement des Single Page Applications (SPA) servies par un serveur web statique et consultation de la documentation Nginx.
+
+### Solution
+
+Configuration de la directive `try_files $uri $uri/ /index.html;` dans le fichier `nginx.conf` pour rediriger toutes les routes inconnues vers le point d'entrée unique `index.html`.
+
+### Ce que j'ai appris
+
+La distinction entre le routage côté serveur et le routage côté client (Client-Side Routing), et comment configurer adéquatement Nginx pour les applications SPA.
+
+---
+
+# 10. Améliorations possibles
+
+Dans une prochaine version, je pourrais :
+
+- Intégrer des graphiques interactifs (camemberts de répartition par catégorie et courbes d'évolution mensuelle) ;
+- Ajouter un système d'authentification utilisateur sécurisé (JWT) pour gérer des budgets multi-utilisateurs ;
+- Permettre l'export des données et bilans au format PDF ou CSV/Excel ;
+- Mettre en place un système de filtres et de tri avancé (par date, catégorie ou fourchette de prix).
+
+### Conclusion
+
+Ces améliorations permettraient de transformer l'outil en une plateforme complète de gestion de budget personnel et d'offrir une meilleure analyse des habitudes financières.
+
+---
+
+# ✅ Checklist finale
+
+## Présentation
+
+- [x] Le nom du projet est clair.
+- [x] Le projet est présenté en 3 à 5 lignes.
+- [x] Le public cible est identifié.
+- [x] Le besoin est expliqué.
+- [x] L'objectif est précisé.
+
+## Fonctionnalités
+
+- [x] 3 à 6 fonctionnalités.
+- [x] Chaque fonctionnalité commence par un verbe.
+- [x] Elles correspondent à des actions réelles.
+
+## Technologies
+
+- [x] Les technologies sont indiquées.
+- [x] Leur rôle est expliqué.
+
+## Installation
+
+- [x] Les prérequis sont présents.
+- [x] Le dépôt est correct.
+- [x] Les commandes fonctionnent.
+- [x] L'adresse locale est indiquée.
+- [x] Aucune donnée sensible n'est publiée.
+
+## Captures
+
+- [x] Deux captures minimum.
+- [x] Chaque capture possède un titre.
+- [x] Les images fonctionnent.
+
+## Contribution
+
+- [x] Ma contribution est précise.
+- [x] Les tâches sont clairement décrites.
+- [x] Je distingue mon travail de celui du groupe.
+
+## Difficultés
+
+- [x] Les difficultés sont expliquées.
+- [x] Les recherches sont décrites.
+- [x] Les solutions sont précisées.
+- [x] Les apprentissages sont présentés.
+
+## Améliorations
+
+- [x] 2 à 4 améliorations.
+- [x] Elles sont réalistes.
+
+---
+
+# Validation finale
+
+Avant de déposer votre README, demandez-vous :
+
+> **Une personne qui ne connaît pas mon projet peut-elle comprendre son objectif, ses fonctionnalités, les technologies utilisées, ma contribution et la manière de lancer le projet ?**
+
+Le présent document valide l'ensemble de ces critères de manière exhaustive et structurée.
