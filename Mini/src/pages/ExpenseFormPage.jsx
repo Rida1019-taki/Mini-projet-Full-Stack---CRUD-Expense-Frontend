@@ -125,6 +125,13 @@ function ExpenseFormPage() {
                             : "Enregistrez une nouvelle dépense."}
                     </p>
                 </div>
+
+                <Link
+                    to="/expenses"
+                    className="btn btn-secondary"
+                >
+                    ← Retour aux dépenses
+                </Link>
             </div>
 
             <ErrorMessage message={error} />

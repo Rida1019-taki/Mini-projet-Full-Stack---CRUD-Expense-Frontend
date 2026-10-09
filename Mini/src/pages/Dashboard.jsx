@@ -60,12 +60,21 @@ function Dashboard() {
                     <p>Résumé de vos dépenses.</p>
                 </div>
 
-                <Link
-                    to="/expenses/new"
-                    className="btn btn-primary"
-                >
-                    + Nouvelle dépense
-                </Link>
+                <div className="header-actions">
+                    <Link
+                        to="/expenses"
+                        className="btn btn-secondary"
+                    >
+                        Voir les dépenses
+                    </Link>
+
+                    <Link
+                        to="/expenses/new"
+                        className="btn btn-primary"
+                    >
+                        + Nouvelle dépense
+                    </Link>
+                </div>
             </div>
 
             <ErrorMessage message={error} />

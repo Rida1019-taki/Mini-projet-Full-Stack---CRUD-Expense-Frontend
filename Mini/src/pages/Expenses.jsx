@@ -74,12 +74,21 @@ function Expenses() {
                     <p>Gérez toutes vos dépenses.</p>
                 </div>
 
-                <Link
-                    to="/expenses/new"
-                    className="btn btn-primary"
-                >
-                    + Ajouter une dépense
-                </Link>
+                <div className="header-actions">
+                    <Link
+                        to="/"
+                        className="btn btn-secondary"
+                    >
+                        ← Retour au Dashboard
+                    </Link>
+
+                    <Link
+                        to="/expenses/new"
+                        className="btn btn-primary"
+                    >
+                        + Ajouter une dépense
+                    </Link>
+                </div>
             </div>
 
             {success && (
