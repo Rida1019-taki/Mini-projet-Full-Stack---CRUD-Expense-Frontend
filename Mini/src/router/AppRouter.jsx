@@ -5,6 +5,10 @@ import Expenses from "../pages/Expenses";
 import ExpenseFormPage from "../pages/ExpenseFormPage";
 import ExpenseDetails from "../pages/ExpenseDetails";
 import NotFound from "../pages/NotFound";
+import ExpenseByCategorie from "../components/ExpenseCategorie";
+import ExpenseByModePaiement from "../components/ExpenseByModePaiement";
+import ExpenseByMontant from "../components/ExpenseByMontant";
+import ExpenseByDateDepense from "../components/ExpenseByDateDepense";
 
 function AppRouter() {
     return (
@@ -17,6 +21,26 @@ function AppRouter() {
                 <Route
                     path="/expenses/new"
                     element={<ExpenseFormPage />}
+                />
+
+                <Route
+                    path="/expenses/categorie"
+                    element={<ExpenseByCategorie />}
+                />
+
+
+                <Route
+                    path="/expenses/modePaiement"
+                    element={<ExpenseByModePaiement />}
+                />
+
+                <Route
+                    path="/expenses/montantGratherThan"
+                    element={<ExpenseByMontant />}
+                />
+                <Route
+                    path="/expenses/dateDepense"
+                    element={<ExpenseByDateDepense />}
                 />
 
                 <Route
