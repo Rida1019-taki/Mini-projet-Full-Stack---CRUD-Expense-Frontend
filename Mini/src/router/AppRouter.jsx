@@ -9,6 +9,8 @@ import ExpenseByCategorie from "../components/ExpenseCategorie";
 import ExpenseByModePaiement from "../components/ExpenseByModePaiement";
 import ExpenseByMontant from "../components/ExpenseByMontant";
 import ExpenseByDateDepense from "../components/ExpenseByDateDepense";
+import ExpenseBetweenByTwoDate from "../components/ExpenseBetweenByTwoDate";
+import ExpenseMontantTotal from "../components/ExpenseMontantTotal";
 
 function AppRouter() {
     return (
@@ -38,6 +40,12 @@ function AppRouter() {
                     path="/expenses/montantGratherThan"
                     element={<ExpenseByMontant />}
                 />
+
+                <Route
+                    path="/expenses/calculerMontantTotal"
+                    element={<ExpenseMontantTotal />}
+                />
+
                 <Route
                     path="/expenses/dateDepense"
                     element={<ExpenseByDateDepense />}
@@ -46,6 +54,11 @@ function AppRouter() {
                 <Route
                     path="/expenses/:id"
                     element={<ExpenseDetails />}
+                />
+
+                <Route
+                    path="/expenses/depenseBetweenTwoDate"
+                    element={<ExpenseBetweenByTwoDate />}
                 />
 
                 <Route

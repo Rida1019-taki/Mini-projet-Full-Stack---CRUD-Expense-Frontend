@@ -37,3 +37,19 @@ export const findBydateDepenseAfter = (dateDepenseAfter) => {
 export const findBymontantGreaterThan = (montantGreaterThan) => {
     return axios.get(`${API_URL}/montantGreaterThan/${montantGreaterThan}`);
 }
+
+export const findDepenseBetweenTwoDate = (dateDebut, dateFin) => {
+    return axios.get(`${API_URL}/depenseBetweenTwoDate/${dateDebut}/${dateFin}`)
+}
+
+export const CalculerMontantTotal = () => {
+    return axios.get(`${API_URL}/calculerMontantTotal`)
+}
+
+export const CalculerMontantParCategorie = (categorie) => {
+    return axios.get(`${API_URL}/calculerMontantTotalParCategorie/${categorie}`)
+}
+
+export const DepenseAyantLeMontant = () => {
+    return axios.get(`${API_URL}/depenseAyantLeMontant`)
+}

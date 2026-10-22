@@ -21,7 +21,8 @@ function ExpenseByModePaiement(){
                 const response = await findByModePaiment(modePaiement);
                 setExpense(response.data);
             }catch(err){
-                setError("Erreur lors du chargement des dépenses.")
+                console.error("Erreur API :", err.response?.status, err.response?.data || err.message);
+                setError("Erreur lors du chargement des dépenses.");
             }finally{
                 setLoading(false);
             }
@@ -40,7 +41,7 @@ function ExpenseByModePaiement(){
             >
                 <option value="CASH">Cash</option>
                 <option value="CARD">Card</option>
-                <option value="TANSFER">Transfer</option>
+                <option value="TRANSFER">Transfer</option>
             </select>
 
             {loading && <p>chargement....</p>}
